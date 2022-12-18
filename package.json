@@ -6,16 +6,27 @@
     "start": "expo start",
     "android": "expo start --android",
     "ios": "expo start --ios",
-    "web": "expo start --web"
+    "web": "expo start --web",
+    "gen:icon": "node genFigmaIcons.mjs && npx svgo --config svgo.config.js ./assets/svgs && npx @svgr/cli --svgo-config .svgrrc.js --no-index ./assets/svgs"
   },
   "dependencies": {
     "expo": "~47.0.8",
     "expo-status-bar": "~1.4.2",
     "react": "18.1.0",
-    "react-native": "0.70.5"
+    "react-dom": "18.1.0",
+    "react-native": "0.70.5",
+    "react-native-svg": "13.4.0",
+    "react-native-web": "~0.18.9"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.9"
+    "@babel/core": "^7.12.9",
+    "@svgr/cli": "^6.5.1",
+    "@types/react": "~18.0.14",
+    "@types/react-native": "~0.70.6",
+    "got": "^12.5.3",
+    "request": "^2.88.2",
+    "svgo": "^3.0.2",
+    "typescript": "^4.6.3"
   },
   "private": true
 }
